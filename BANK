@@ -1,0 +1,154 @@
+    #include<iostream>
+    using namespace std;
+    //declarations
+    int selection;
+    int selection1;
+    int input;
+    //declarations closed
+
+    //structure opens
+    struct bank
+    {
+        char last_name[50];
+        char first_name[50];
+        int age;
+        int deposit;
+        int balance=0;
+        int withdrawl;
+        int pannumber=0;
+        int adharnumber;
+    
+    };
+    //structure closes
+
+    //main function opens
+    main()
+    {
+        cout<<"WELCOME TO ONLINE BANKING SERVICE"<<endl;
+        cout<<"Enter the first four letters of your name";
+        cin>>input
+        person input;
+        cout<<"Kindly select your reason for visit\n1.Bank Account Creation\n2.Deposit amount for the customer\n3.Withdrawlamount for the customer\n4.Balance Enquiry\n5.Show account holder’s full detail\n6.Closing or terminating a bank account\n7.Updating the bank account"<<endl;
+        cin>>selection1;
+        switch(selection1)
+        {
+            case 1://BANK ACCOUNT CREATION
+            input.bank_creation();
+                break;
+            case 2://DEPOSIT AMOUNT OF CUSTOMER
+            input.deposition();
+                break;
+            case 3://WITHDRAWL
+                input.withdrawler();
+                break;
+            case 4://BALANCE ENQUIRY
+            input.enquiry();
+                break;
+            case 5://ACCOUNT HOLDER'S DETAIL
+            input.holder();
+                break;
+            case 6://CLOSING OR TERMINATING A BANK ACCOUNT
+            input.close();
+                break;
+            case 7://UPDATE AN ACCOUNT
+            input.up();
+                break;
+            default:
+                cout<<"Kindly select a valid option";
+        }
+    }
+        
+    }
+    //main function closes
+
+    //FUNCTION 1
+    void bank_creation()
+    {
+        cout<<"Enter the first name of the person"<<endl;
+        cin>>input.first_name;
+        cout<<"Enter the last name of the person"<<endl;
+        cin>>input.last_name;
+        cout<<"enter the age of the person"<<endl;
+        cin>>input.age;
+        cout<<"Do you have pan card? type Y for yes and N for no"<<endl;
+        cin>>selection;
+        if(selection==Y)
+        cout<<"enter your pancard number"<<endl;
+        cin>>input.pannumber;
+        else
+        cout<<"Enter your adhar card number"<<endl;
+        cin>>input.adharnumber;
+    }
+    //function 1 closes
+
+    //FUNCTION 2
+            void deposition
+            {
+            cout<<"enter the amount you want to deposit"<<endl;
+            cin>>input.deposit;
+            cout<<"Your cash has been deposited";
+            input.balance=input.deposit+input.balance;
+        //BALANCE = 0+DEPOSIT	
+            }
+    //FUNCTION 2 CLOSES
+
+    //FUNCTION 3 OPENS
+    //WITHDRAWL
+
+        void withdrawler()
+        {
+            cout<<"enter the amount you want to withdraw";
+            cin>>input.withdrawl;
+            if(input.balance>=input.withdrawl)
+            cout<<"Amount withdrawn";
+            else
+            cout<<"Not available balance for proper withdrawl";
+        }
+    //FUNCTION 3 CLOSES
+
+    //FUNCTION 4 OPENS
+    void enquiry()
+            {
+                cout<<"Balance is"<<input.balance<<endl;
+            }
+    //FUCNTION 4 CLOSES
+
+    //FUNCTION 5 OPENS
+    void holder()
+            {
+                cout<<"First name "<<input.Firstname<<endl;
+                cout<<"Last name "<<input.Lastname<<endl;
+                cout<<"Age "<<input.Age<<endl;
+                cout<<"Gender "<<input.Gender<<endl;
+                if(Pannumber=0)
+                cout<<"Adhar number "<<input.adharnumber<<endl;
+                else
+                cout<<"Pan number"<<input.pannumber<<endl;
+            }
+    //FUCNTION 5 CLOSES
+
+    //FUNCTION 6 OPENS
+    void close
+            {
+                input.Firstname=0;
+                input.Lastname=0;
+                input.Age=0;
+                cout<<"Your bank account has been terminated. Sorry to see you go."<<endl;
+            }
+    //FUNCTION 6 CLOSES
+
+    //FUNCTION 7 OPENS
+    void up()
+            {
+                cout<<"Enter your first name"<<endl;
+        cin>>input.Firstname;
+        cout<<"Enter your last name"<<endl;
+        cin>>input.Lastname;
+        cout<<"Enter your age"<<endl;
+        cin>>input.Age;
+        cout<<"Enter your gender"<<endl;
+        cin>>input.Gender;
+        cout<<"Congrats! Bank Account updated."<<endl;
+
+            }
+    //FUNCTION 7 CLOSES
